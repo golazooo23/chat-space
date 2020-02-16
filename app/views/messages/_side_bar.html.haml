@@ -1,1 +1,18 @@
-＜サイドバー＞
+.chat-side
+  .side-header
+    .side-header__box
+      .side-header__box__user-name
+        kengo
+      %ul.side-header__box__icon
+        .side-header__box__icon__new-group
+          = link_to "#" do
+            %i.fa.fa-edit
+        .side-header__box__icon__edit-user    
+          = link_to "#" do
+            %i.fa.fa-cog      
+  .group-list
+    .group
+      .group__group-name
+        techexpert
+      .group__group-message
+        テストに合格しました！

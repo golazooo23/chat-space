@@ -1,1 +1,13 @@
-＜チャット画面＞
+.chat-main
+  .group-info
+    %ul.group-info__left-box
+      %li.group-info__left-box__group-name
+        test
+      %li.group-info__left-box__group-member
+        kengo
+    = link_to "#" do
+      .group-info__edit-btn
+        Edit
+  .message-list
+    = render "messages"
+  .message-form
