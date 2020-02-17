@@ -1,0 +1,20 @@
+.chat-main
+  .group-info
+    %ul.group-info__left-box
+      %li.group-info__left-box__group-name
+        test
+      %li.group-info__left-box__group-member
+        kengo
+    = link_to "#", class: "inline" do
+      .group-info__edit-btn
+        Edit
+  .message-list
+    = render "messages"
+  .message-form
+    %form.message-form__new
+      %input.message-form__new__text{type:"text",placeholder:"type a message"}
+      %label.message-form__new__image
+        = icon('fas', 'image')
+        %input.message-form__new__image__file{type: "file"}
+      .message-form__new__send
+        Send
