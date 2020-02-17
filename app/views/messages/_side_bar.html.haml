@@ -5,14 +5,16 @@
         = current_user.name
       %ul.side-header__box__icon
         .side-header__box__icon__new-group
-          = link_to "#" do
+          = link_to new_group_path do
             %i.fa.fa-edit
         .side-header__box__icon__edit-user    
           = link_to edit_user_path(current_user) do
             %i.fa.fa-cog      
   .group-list
-    .group
-      .group__group-name
-        techexpert
-      .group__group-message
-        テストに合格しました！
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__group-name
+            = group.name
+          .group__group-message
+            テストに合格しました！
