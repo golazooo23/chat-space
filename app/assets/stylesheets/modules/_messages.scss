@@ -12,6 +12,10 @@ body{
   box-sizing: border-box;
 }
 
+.inline{
+  text-decoration: none;
+}
+
 .wrapper{
   height: 100%;
   width: 100%;
@@ -109,18 +113,18 @@ body{
     &__edit-btn{
       color: #38aef0; 
       width: 72px;
-      padding-top: 28px;
+      margin-top: 28px;
       font-size: 16px;
-      // background-color: red;
-      margin-right: 20px;
+      border: solid 1px #38aef0;
+      margin-right: 40px;
       line-height: 40px;
+      padding-left: 20px;
     }
 
     &__left-box{
       padding-left: 40px;
       padding-top: 35px;
     
-
       &__group-name{
       color: #333333;
       font-size: 20px;
@@ -171,5 +175,38 @@ body{
 .message-form{
   background-color: #d2d2d2;
   height: 90px;
+  padding: 20px 40px;
+
+  &__new{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    position: relative;
+
+    &__text{
+      height: 50px;
+      width:calc(100% - 115px);
+      padding-left: 10px;
+    }
+
+    &__send{
+      background-color: #38AEF0;
+      color: white;
+      width: 100px;
+      text-align: center;
+      padding-top: 15px;
+    }
+
+    &__image{
+      position: absolute;
+      top: 15px;
+      right: 135px;
+      z-index: 2;
+
+      &__file{
+        display: none;
+      }
+    }
+  }
 }
  
