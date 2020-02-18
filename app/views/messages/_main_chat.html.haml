@@ -2,13 +2,15 @@
   .group-info
     %ul.group-info__left-box
       %li.group-info__left-box__group-name
-        curerent.group_name
+        = @group.name
       %li.group-info__left-box__group-member
-        kengo
-    = link_to "#", class: "inline" do
+        MEMBER:        
+        = User.pluck(:name)
+    -# = link_to edit_group_path(@group) class: "inline" do
+    = link_to edit_group_path(@group), class: "inline" do
       .group-info__edit-btn
         Edit
-        
+
   -# .message-list
   -#   = render partial: 'message', collection: @messages
 
