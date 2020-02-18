@@ -2,19 +2,45 @@
   .group-info
     %ul.group-info__left-box
       %li.group-info__left-box__group-name
-        test
+        = @group.name
       %li.group-info__left-box__group-member
-        kengo
-    = link_to "#", class: "inline" do
+        MEMBER:        
+        = User.pluck(:name)
+    -# = link_to edit_group_path(@group) class: "inline" do
+    = link_to edit_group_path(@group), class: "inline" do
       .group-info__edit-btn
         Edit
+
+  -# .message-list
+  -#   = render partial: 'message', collection: @messages
+
   .message-list
-    = render "messages"
+    = render @messages
+
+
+  -# .message-form
+  -#   %form.message-form__new
+  -#     %input.message-form__new__text{type:"text",placeholder:"type a message"}
+  -#     %label.message-form__new__image
+  -#       = icon('fas', 'image')
+  -#       %input.message-form__new__image__file{type: "file"}
+  -#     .message-form__new__send
+  -#       Send
+
   .message-form
-    %form.message-form__new
-      %input.message-form__new__text{type:"text",placeholder:"type a message"}
-      %label.message-form__new__image
-        = icon('fas', 'image')
-        %input.message-form__new__image__file{type: "file"}
-      .message-form__new__send
-        Send
+    .message-form__new
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'message-form__new__text', placeholder: 'type a message'
+        = f.label :image, class: 'message-form__new__image' do
+          = icon('fas', 'image')
+          = f.file_field :image, class: 'message-form__new__image__file'
+        = f.submit 'Send', class: 'message-form__new__send'
+
+  -# .form
+  -#   = form_for [@group, @message] do |f|
+  -#     = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+  -#     .form__mask
+  -#       = f.label :image, class: 'form__mask__image' do
+  -#         = icon('fas', 'image', class: 'icon')
+  -#         = f.file_field :image, class: 'hidden'
+  -#     = f.submit 'Send', class: 'form__submit'

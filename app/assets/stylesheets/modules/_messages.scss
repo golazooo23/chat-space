@@ -183,16 +183,21 @@ body{
 
     &__text{
       height: 50px;
-      width:calc(100% - 115px);
+      width: 470%;
       padding-left: 10px;
+      margin-bottom: 20px;
+      background-color:white;
     }
 
     &__send{
       background-color: #38AEF0;
       color: white;
       width: 100px;
+      height: 50px;
       text-align: center;
-      padding-top: 15px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
     }
 
     &__image{
