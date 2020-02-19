@@ -86,7 +86,6 @@ $(function(){
         //メッセージが入ったHTMLに、入れ物ごと追加
         $('.messages').append(insertHTML);
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-      console.log('success');
       }
     })
     .fail(function() {
