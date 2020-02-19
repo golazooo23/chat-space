@@ -89,7 +89,7 @@ $(function(){
       }
     })
     .fail(function() {
-      console.log('error');
+      alert('エラーです。メッセージが表示できません。');
     });
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
