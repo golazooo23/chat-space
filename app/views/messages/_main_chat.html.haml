@@ -5,7 +5,8 @@
         = @group.name
       %li.group-info__left-box__group-member
         MEMBER:        
-        = User.pluck(:name)
+        - @group.users.each do |groupuser|
+          = groupuser.name
     = link_to edit_group_path(@group), class: "inline" do
       .group-info__edit-btn
         Edit
