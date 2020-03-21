@@ -26,10 +26,10 @@ Things you may want to cover:
 # Chat-space DB設計
 ## usersテーブル
 |id|名前|予約1|予約2|
-|------|----|-------|
-|name|string|null: false, unique:true|
-|email|string|null: false, unique:true|
-|password|string|null: false|
+|------|----|-------|-------|
+|name|string|null: false, unique:true|テスト|
+|email|string|null: false, unique:true|テスト|
+|password|string|null: false|テスト|
 ### Association
 - has_many :messages
 - has_many :groups_users 
