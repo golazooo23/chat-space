@@ -27,9 +27,9 @@ Things you may want to cover:
 ## usersテーブル
 |id|名前|予約1|予約2|
 |------|----|-------|-------|
-|name|string|null: false, unique:true|テスト|
-|email|string|null: false, unique:true|テスト|
-|password|string|null: false|テスト|
+|1|鈴木|〇〇|〇〇|
+|2|山田|〇〇|〇〇|
+|3|佐藤|〇〇|〇〇|
 ### Association
 - has_many :messages
 - has_many :groups_users 
