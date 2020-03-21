@@ -25,7 +25,7 @@ Things you may want to cover:
 
 # Chat-space DB設計
 ## usersテーブル
-|Column|Type|Options|
+|id|名前|予約1|予約2|
 |------|----|-------|
 |name|string|null: false, unique:true|
 |email|string|null: false, unique:true|
